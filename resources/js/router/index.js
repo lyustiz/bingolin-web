@@ -4,6 +4,7 @@ Vue.use(Router)
 
  //secciones
 import Welcome             from '@views/welcome/Welcome';
+import Home                from '@views/home/Home';
 import Admin               from '@views/admin/Admin';
 /*import Home                  from '@views/home/home';*/
 
@@ -24,6 +25,15 @@ export default new Router({
           profile: '',
           visible: false,
           component: Welcome,
+        },
+        {
+          path:  '/home',
+          name:  'home',
+          label: 'Home',
+          icon:  'mdi-home',
+          profile: '',
+          visible: false,
+          component: Home,
         },
         
         {
