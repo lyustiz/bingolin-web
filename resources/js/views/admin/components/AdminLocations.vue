@@ -45,11 +45,11 @@
                           </v-col>
   
                           <v-col cols="12" >
-                            <v-row>
+                            <v-row dense>
                               <v-col class="text-center">
                                 <v-tooltip bottom color="red">
                                   <template v-slot:activator="{ on }">
-                                    <v-icon color="red" v-on="on" size="32">mdi-television-play</v-icon>
+                                    <v-icon color="red" v-on="on" size="30">mdi-television-play</v-icon>
                                   </template>
                                   <span>{{sede.tx_transmision}}</span>
                                 </v-tooltip>
@@ -57,7 +57,7 @@
                               <v-col class="text-center">
                                 <v-tooltip bottom>
                                   <template v-slot:activator="{ on }">
-                                    <v-icon color="yellow" v-on="on" size="32">mdi-map-marker-radius-outline</v-icon>
+                                    <v-icon color="yellow" v-on="on" size="30">mdi-map-marker-radius-outline</v-icon>
                                   </template>
                                   <span>{{sede.tx_mapa}}</span>
                                 </v-tooltip>
@@ -65,7 +65,7 @@
                               <v-col class="text-center">
                                 <v-tooltip bottom color="blue">
                                   <template v-slot:activator="{ on }">
-                                    <v-icon color="blue" v-on="on" size="32">mdi-phone</v-icon>
+                                    <v-icon color="blue" v-on="on" size="30">mdi-phone</v-icon>
                                   </template>
                                   <span>{{sede.tx_telefono}}</span>
                                 </v-tooltip>
@@ -73,7 +73,7 @@
                               <v-col class="text-center">
                                 <v-tooltip bottom color="green">
                                   <template v-slot:activator="{ on }">
-                                    <v-icon color="green" v-on="on" size="32">mdi-whatsapp</v-icon>
+                                    <v-icon color="green" v-on="on" size="30">mdi-whatsapp</v-icon>
                                   </template>
                                   <span>{{sede.tx_whatsapp}}</span>
                                 </v-tooltip>

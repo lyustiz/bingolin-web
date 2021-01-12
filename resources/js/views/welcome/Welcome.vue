@@ -53,23 +53,24 @@ export default {
 
 <style>
 .city-name{
-   color: white;
-   text-shadow: 2px 2px #383838;
-   background-color: rgba(43, 39, 39, 0.2);
- }
+  color: white;
+  text-shadow: 2px 2px #383838;
+  background-color: rgba(43, 39, 39, 0.2);
+}
 
- .text-image{
+.text-image{
    text-shadow: 2px 2px #383838;
- }
- .badground-image{
-   background-color: rgba(43, 39, 39, 0.2);
- }
+}
 
- .text-image-white{
+.badground-image{
+   background-color: rgba(43, 39, 39, 0.2);
+}
+
+.text-image-white{
    text-shadow: 1px 1px rgb(255, 255, 255);
- }
+}
 
- .v-slide-group__next, .v-slide-group__prev{
+.v-slide-group__next, .v-slide-group__prev{
   min-width: 1px !important;
 }
 
@@ -78,12 +79,16 @@ export default {
 }
 
 .promocion-color{
-    background-color: #8D70FF !important;
+  background-color: #8D70FF !important;
 }
 .resultados-color{
-    background-color: #FCC02E !important;
+  background-color: #FCC02E !important;
 }
 .sorteo-color{
-    background-color:#33CC33 !important;
+  background-color:#33CC33 !important;
+}
+
+.pointer{
+  cursor: pointer;
 }
 </style>

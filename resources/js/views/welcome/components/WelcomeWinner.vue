@@ -15,7 +15,7 @@
               </v-col>
               <v-col cols="11"> 
                 <v-card flat height="40vh">
-                  <img height="100%" width="100%" :src="winner.full_url" class="rounded-lg" @click="showImage(winner.full_url)"></img>
+                  <img height="100%" width="100%" :src="winner.full_url" class="rounded-lg pointer" @click="showImage(winner.full_url)"></img>
                 </v-card>
               </v-col>
             </v-row>

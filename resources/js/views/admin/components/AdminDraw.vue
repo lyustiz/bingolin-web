@@ -4,7 +4,7 @@
     <v-card-title class="grey lighten-4">
       <v-row>
         <v-col>
-          <h3 class="headline mb-0">Sorteos</h3>
+          <h3 class="headline mb-0">Promociones</h3>
         </v-col>
         <v-col cols="auto">
           <AppFoto :tipo-foto="4" @storeImage="list()"></AppFoto>

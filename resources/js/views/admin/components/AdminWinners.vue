@@ -19,7 +19,7 @@
               align="center"
               justify="center"
             >
-              <v-btn icon dark large class="elevation-6" @click="deletePicture(foto.id)">
+              <v-btn icon dark large class="elevation-10" @click="deletePicture(foto.id)">
                 <v-icon
                   color="white"
                   size="50"
