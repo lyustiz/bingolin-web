@@ -1,7 +1,13 @@
 <template>
   <v-row>
       <v-col >
-        <v-carousel class="rounded-lg">
+        <v-carousel 
+          class="rounded-lg" 
+          height="55vh"
+          hide-delimiters
+          hide-delimiter-background
+          show-arrows-on-hover
+          cycle>
           <v-carousel-item
             v-for="(banner,i) in banners"
             :key="i"

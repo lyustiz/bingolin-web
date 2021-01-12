@@ -1,36 +1,47 @@
 <template>
-
-<v-container fluid>
-   <v-app class="transparent">
-    <v-main>
-        <WelcomeBanner></WelcomeBanner>
-        <WelcomeLocations></WelcomeLocations>
-      <v-row>
-        <WelcomeDraw></WelcomeDraw>
-        <WelcomePrize></WelcomePrize>
-        <WelcomeWinner></WelcomeWinner>
+<v-app class="transparent">
+  <v-main>
+    <v-container class="mt-n6">
+      <v-row dense>
+        <v-col cols="12" md="7">
+          <VisorVideo></VisorVideo>
+        </v-col>
+        <v-col cols="12" md="5">
+          <WelcomeBanner></WelcomeBanner>
+        </v-col>
       </v-row>
-    </v-main>
-  </v-app>
-</v-container>
-
+      <v-row class="mt-4">
+        <v-col cols="12" md="4">
+          <WelcomePromotion></WelcomePromotion>
+        </v-col>
+        <v-col cols="12" md="4">
+          <WelcomeWinner></WelcomeWinner>
+        </v-col>
+        <v-col cols="12" md="4">
+          <WelcomeLocations></WelcomeLocations>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-main>
+</v-app>
 </template>
 
 <script>
+import VisorVideo from './components/VisorVideo'
 import WelcomeBanner    from './components/WelcomeBanner'
-import WelcomeLocations from './components/WelcomeLocations'
-import WelcomeDraw      from './components/WelcomeDraw'
-import WelcomePrize     from './components/WelcomePrize'
+import WelcomePromotion from './components/WelcomePromotion'
 import WelcomeWinner    from './components/WelcomeWinner'
+import WelcomeLocations from './components/WelcomeLocations'
+
 export default {
-  name: 'HelloWorld',
+  name: 'Welcome',
 
   components:{
-      WelcomeBanner,
-      WelcomeLocations,
-      WelcomeDraw,
-      WelcomePrize,
-      WelcomeWinner
+    VisorVideo,
+    WelcomeBanner,
+    WelcomePromotion,
+    WelcomeWinner,
+    WelcomeLocations,     
   },
   
   data: () => ({
@@ -55,7 +66,7 @@ export default {
  }
 
  .text-image-white{
-   text-shadow: 0.5px 0.5px rgb(255, 255, 255);
+   text-shadow: 1px 1px rgb(255, 255, 255);
  }
 
  .v-slide-group__next, .v-slide-group__prev{
@@ -64,5 +75,15 @@ export default {
 
 .v-slide-group__content{
   justify-content: center !important;
+}
+
+.promocion-color{
+    background-color: #8D70FF !important;
+}
+.resultados-color{
+    background-color: #FCC02E !important;
+}
+.sorteo-color{
+    background-color:#33CC33 !important;
 }
 </style>

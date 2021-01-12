@@ -8,7 +8,7 @@
       flat
       class="pt-3"
     >
-      <v-avatar size="50" color="white" class="mr-2">
+      <v-avatar size="50" color="white" class="mr-2" @click="navigateToName('welcome')">
         <img src="/images/logo.jpg" alt="Bingolin">
       </v-avatar>
 
@@ -16,7 +16,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn small text @click="promocion=true">
+     <!--  <v-btn small text @click="promocion=true">
         Promocion
       </v-btn>
 
@@ -42,19 +42,19 @@
         
       <v-btn small text>
         Ayuda
-      </v-btn>
+      </v-btn> -->
 
       <v-spacer></v-spacer>
 
-      <v-btn depressed small rounded black class=" mr-3">
+      <!-- <v-btn depressed small rounded black class=" mr-3">
         <v-icon left>mdi-account-plus</v-icon>
         Registro
-      </v-btn>
+      </v-btn>-->
 
       <v-btn depressed small rounded color="success" @click="navigateToName('admin')">
         <v-icon left>mdi-account</v-icon>
         Login
-      </v-btn>
+      </v-btn> 
 
     <v-dialog
       v-model="promocion"

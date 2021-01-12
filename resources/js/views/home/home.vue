@@ -14,7 +14,7 @@
 
     <v-row class="mt-4">
         <v-col cols="12" md="4">
-            <v-card height="" color="white" class="rounded-lg elevation-8">
+            <v-card height="" color="white" class="rounded-lg elevation-">
                 <v-card-text class="text-center white--text">
                      <v-row no-gutters>
                          <v-col cols="12">
@@ -60,7 +60,7 @@
             
         </v-col>
         <v-col cols="12" md="4">
-            <v-card height="" color="white" class="rounded-lg elevation-8">
+            <v-card height="" color="white" class="rounded-lg elevation-">
                 <v-card-text class="text-center white--text">
                      <v-row no-gutters>
                          <v-col cols="12">
@@ -85,7 +85,7 @@
                                  </v-col>
                                  <v-col cols="11"> 
                                      <v-card flat height="40vh">
-                                         <v-img height="100%" width="100%" src="/images/icons/win2.jpg" class="rounded-lg"></v-img>
+                                         <img height="100%" width="100%" src="/images/icons/win2.jpg" class="rounded-lg"></img>
                                      </v-card>
                                  </v-col>
                              </v-row>
@@ -95,7 +95,7 @@
                                  </v-col>
                                  <v-col cols="11"> 
                                      <v-card flat height="40vh">
-                                         <v-img height="100%" width="100%" src="/images/icons/win3.jpg" class="rounded-lg"></v-img>
+                                         <img height="100%" width="100%" src="/images/icons/win3.jpg" class="rounded-lg"></img>
                                      </v-card>
                                  </v-col>
                              </v-row>
@@ -105,7 +105,7 @@
             </v-card>
         </v-col>
         <v-col cols="12" md="4">
-            <v-card height="" color="white" class="rounded-lg elevation-8">
+            <v-card height="" color="white" class="rounded-lg elevation-">
                 <v-card-text class="text-center white--text">
                      <v-row no-gutters>
                          <v-col cols="12">

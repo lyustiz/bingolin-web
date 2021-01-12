@@ -33,7 +33,7 @@ export default new Router({
           icon:  'mdi-home',
           profile: '',
           visible: false,
-          component: Home,
+          component: Welcome,
         },
         
         {
