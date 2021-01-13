@@ -25,7 +25,7 @@ class FotoController extends Controller
 
     public function fotoTipo( $idTipoFoto )
     {
-        $foto = Foto::with(['tipoFoto:id,nb_tipo_foto,tx_origen,tx_base_path'])
+        $foto = Foto::with(['tipoFoto:id,nb_tipo_foto,tx_origen,tx_base_path', 'sede:id,nb_sede'])
                           ->where('id_tipo_foto', $idTipoFoto)
                           ->get();
         
@@ -59,7 +59,7 @@ class FotoController extends Controller
 
         $tipoFoto    = TipoFoto::where('id', $request->id_tipo_foto)->first();
 
-        if($tipoFoto->id == 2)
+        if($request->id_tipo_foto != 1)
         {
             $this->deleteFotosSede($request, $tipoFoto);
         }
@@ -164,7 +164,7 @@ class FotoController extends Controller
 
         $folder   = $tipoFoto->tx_origen . DIRECTORY_SEPARATOR ;
 
-        $foto     = Foto::where('id_origen', $request->id_origen)->first();
+        $foto     = Foto::where(['id_origen' => $request->id_origen, 'id_tipo_foto' => $request->id_tipo_foto])->first();
 
         if($foto)
         {

@@ -10,7 +10,7 @@
         <v-col class="mt-3">
           <v-row no-gutters class="my-3" v-for="sorteo in sorteos" :key="sorteo.id">
             <v-col cols="1" class="d-flex justify-center align-center font-weight-bold">
-              <div class="rounded-r-lg promocion-color test--white vertical-text pa-1 mr-n2">CARTAGO</div>
+              <div class="rounded-r-lg promocion-color test--white vertical-text pa-1 mr-n2 text-uppercase">{{sorteo.sede.nb_sede}}</div>
             </v-col>
             <v-col cols="11"> 
               <v-card flat height="40vh">

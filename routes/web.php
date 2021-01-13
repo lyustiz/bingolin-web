@@ -10,4 +10,4 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'welcome'])->name('
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::view('{path}', 'app')->where('path', '(.*)');
+Route::get('{path}', [App\Http\Controllers\HomeController::class, 'welcome'])->where('path', '(.*)');

@@ -42,6 +42,7 @@ class HomeController extends Controller
     public function getData()
     {
         $foto = Foto::select('nb_foto', 'tx_src','id_tipo_foto','id_origen','id_status')
+                    ->with(['sede:id,nb_sede'])
                     ->activo()
                     ->get();
 

@@ -29,7 +29,7 @@
         <v-tab-item>
           <v-card flat>
             <v-card-text>
-                <v-card-text><AdminDraw></AdminDraw></v-card-text>
+                <v-card-text><AdminPromotion></AdminPromotion></v-card-text>
             </v-card-text>
           </v-card>
         </v-tab-item>
@@ -124,7 +124,7 @@
 
 <script>
 import AdminBanner    from './components/AdminBanner'
-import AdminDraw      from './components/AdminDraw'
+import AdminPromotion from './components/AdminPromotion'
 import AdminWinners   from './components/AdminWinners'
 import AdminLocations from './components/AdminLocations'
 import AppData        from '@mixins/AppData';
@@ -133,7 +133,7 @@ export default {
 
   components:{
     AdminBanner,
-    AdminDraw,
+    AdminPromotion,
     AdminWinners,
     AdminLocations,
   },
@@ -148,13 +148,13 @@ export default {
   data: () => ({
       tab: 0,
       form:{
-                nb_usuario: '',
-                password  :   '',
-            },
-      show: false,
-      loading: false,
-      valid: '',
-      isLogin: true
+        nb_usuario: '',
+        password  : '',
+      },
+      show:     false,
+      loading:  false,
+      valid:    '',
+      isLogin:  true
   }),
 
   methods:{

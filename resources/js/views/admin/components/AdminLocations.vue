@@ -127,8 +127,8 @@
                 ></v-text-field>
               </v-col>
               <v-col cols="auto">
-                <v-btn x-small fab @click="store()" color="success"><v-icon>mdi-plus</v-icon></v-btn>
-                <v-btn x-small fab @click="newSede=false" color="error"><v-icon>mdi-close</v-icon></v-btn>
+                <v-btn x-small fab @click="store()" color="success" :loading="loading"><v-icon>mdi-plus</v-icon></v-btn>
+                <v-btn x-small fab @click="newSede=false" color="error" :loading="loading"><v-icon>mdi-close</v-icon></v-btn>
               </v-col>
             </v-row>
           </v-card-text>

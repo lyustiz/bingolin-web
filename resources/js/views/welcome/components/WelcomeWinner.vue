@@ -11,7 +11,7 @@
           <v-col class="mt-3">
             <v-row no-gutters class="my-3" v-for="(winner,i) in winners" :key="i">
               <v-col cols="1" class="d-flex justify-center align-center font-weight-bold">
-                <div class="rounded-r-lg resultados-color test--white vertical-text pa-1 mr-n2">CARTAGO</div>
+                <div class="rounded-r-lg resultados-color test--white vertical-text pa-1 mr-n2 text-uppercase">{{winner.sede.nb_sede}}</div>
               </v-col>
               <v-col cols="11"> 
                 <v-card flat height="40vh">

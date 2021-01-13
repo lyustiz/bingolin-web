@@ -55,4 +55,9 @@ class Foto extends Model
         return $this->BelongsTo('App\Models\TipoFoto', 'id_tipo_foto');
     }
 
+    public function sede()
+    {
+        return $this->BelongsTo('App\Models\Sede', 'id_origen', 'id');
+    }
+
 }
