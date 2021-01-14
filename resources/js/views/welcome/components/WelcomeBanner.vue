@@ -3,7 +3,7 @@
       <v-col >
         <v-carousel 
           class="rounded-lg" 
-          height="55vh"
+          height="60vh"
           hide-delimiters
           hide-delimiter-background
           show-arrows-on-hover
@@ -14,7 +14,7 @@
             :src="banner.full_url" 
             reverse-transition="fade-transition"
             transition="fade-transition"
-          >
+          > 
           <v-row class="fill-height" justify="center" align="center">
             <v-col cols="12" class="text-center">
                <div class="d-block display-3 font-weight-bold text-image">Bienvenidos a Bingolin</div> 

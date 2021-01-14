@@ -5,10 +5,10 @@
     <v-row no-gutters>
         <v-col cols="12">
             <v-card  flat> 
-                <v-img src="/images/secciones/sorteos.png" contain height="25vh"></v-img>
+                <v-img src="/images/secciones/sorteos.png" contain height="30vh"></v-img>
             </v-card>
         </v-col>
-        <v-col class="mt-3">
+        <v-col>
             <v-row no-gutters class="my-3"  v-for="(loc, key) in localidades" :key="key">
 
               <v-col cols="1" class="d-flex justify-center align-center font-weight-bold">
@@ -17,7 +17,7 @@
 
               <v-col cols="11"> 
                 <v-img
-                  class="rounded-lg"
+                  class="rounded-lg elevation-2"
                   height="40vh" width="100%"
                   :src="loc.foto.full_url"
                 >

@@ -1,19 +1,19 @@
 <template>
 
     <div>
-        <v-card dark class="rounded-lg">
+        <v-card dark class="rounded-lg" height="60vh">
             <v-row no-gutters justify="center">
 
-                <v-window v-model="dialogVideo" continuous show-arrows class="windows-container2 rounded-lg"> 
+                <v-window v-model="dialogVideo" continuous show-arrows class="windows-holder rounded-lg"> 
                     <v-window-item
                         v-for="video in videos"
                         :key="video.id"
-                        class="windows-container2"
+                        class="windows-holder"
                         eager
                     >
-                    <div class="youtube-container2">
+                    <div class="youtube-holder">
                         <iframe  v-if="video.id == dialogVideo"
-                            class="rounded-lg responsive-iframe2" 
+                            class="rounded-lg holder-iframe" 
                             @load="loading = false" 
                             :src="`${video.src}?&enablejsapi=1&loop=1&rel=0&showinfo=0`"  
                             frameborder="0" 
@@ -47,22 +47,22 @@ export default {
 </script>
 
 <style>
-.windows-container2
+.windows-holder
 {
   width: 100%;
-  height: 55vh; 
+  height: 60vh; 
 }
 
 
-.youtube-container2
+.youtube-holder
 {
    position: relative;
   overflow: hidden;
-  width: 100%;
+  height: 60vh; 
   height: 100%;
 }
 
-.responsive-iframe2 {
+.holder-iframe {
   position: absolute;
   top: 0;
   left: 0;

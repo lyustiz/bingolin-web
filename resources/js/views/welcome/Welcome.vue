@@ -1,7 +1,7 @@
 <template>
 <v-app class="transparent">
   <v-main>
-    <v-container class="mt-n6">
+    <v-container fluid class="mt-n8">
       <v-row dense>
         <v-col cols="12" md="7">
           <VisorVideo></VisorVideo>
@@ -79,13 +79,13 @@ export default {
 }
 
 .promocion-color{
-  background-color: #8D70FF !important;
+  background-color: #FFFFFF !important;
 }
-.resultados-color{
-  background-color: #FCC02E !important;
+.resultado-color{
+  background-color: #9B069B !important;
 }
 .sorteo-color{
-  background-color:#33CC33 !important;
+  background-color:#16B033 !important; 
 }
 
 .pointer{
