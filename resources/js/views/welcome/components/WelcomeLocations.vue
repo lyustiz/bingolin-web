@@ -45,10 +45,10 @@
                     <span>Transmision en Vivo</span>
                   </v-tooltip>
 
-                  <v-tooltip bottom color="green">
+                  <v-tooltip bottom color="amber darken-1">
                     <template v-slot:activator="{ on, attrs }">
                       <v-icon
-                        color="yellow"
+                        color="amber darken-1"
                         size="45"
                         class="mx-2 shadow-white-text-small"
                         dark
@@ -56,7 +56,7 @@
                         v-on="on"
                         @click="showLocation(loc.tx_mapa)"
                       >
-                        mdi-map-marker-radius-outline
+                        mdi-map-marker-radius
                       </v-icon>
                     </template>
                     <span>{{loc.tx_ubicacion}}</span>
