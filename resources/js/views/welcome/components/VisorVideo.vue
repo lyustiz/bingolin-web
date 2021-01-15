@@ -39,8 +39,9 @@ export default {
         length:    2,
         dialogVideo: 0,
         videos:[
-           { id: 0, src: 'https://www.youtube.com/embed/IH7hpclqfxc' },
-           { id: 1, src: 'https://www.youtube.com/embed/wVofL_caczs' }
+           { id: 0, src: 'https://www.youtube.com/embed/videoseries?list=PL2tw3E5SMMElCayTUDPWuLFlZPLWawmiO' },
+           { id: 1, src: 'https://www.youtube.com/embed/videoseries?list=PLhVF_CPD362lgBZRNNj0qHU6zyLnzcqfX' }, 
+           { id: 2, src: 'https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG' } 
         ]
     })
 }
