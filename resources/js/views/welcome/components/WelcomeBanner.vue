@@ -17,20 +17,20 @@
           > 
           <v-row class="fill-height" justify="center" align="center">
             <v-col cols="12" class="text-center">
-               <div class="d-block display-3 font-weight-bold text-image">Bienvenidos a Bingolin</div> 
-               <div class="headline text-image">Telebingo en Linea</div>   
-               <div class="headline text-image mt-1">
+               <div class="d-block display-4 font-weight-black"><span class="titulo-logo-orange titulo-logo">Bingo</span><span class="titulo-logo-green titulo-logo">lin</span></div> 
+               <div class="subtitulo-logo shadow-white-text">Telebingo en Linea</div>   
+               <div class="mt-1">
                   <v-btn icon link target="_blank" href="https://www.youtube.com/channel/UC3IjTAtJh4WWZelow8DzL8Q" class="mx-4">
-                    <v-icon color="white" size="32">mdi-youtube</v-icon>
+                    <v-icon color="#ff0000" size="44" class="shadow-white-text-small">mdi-youtube</v-icon>
                   </v-btn>
                   <v-btn icon link target="_blank" href="https://www.instagram.com/p/CJtP6zZpvLh/" class="mx-4">
-                    <v-icon color="white" size="32">mdi-instagram</v-icon>
+                    <v-icon color="#517fa4" size="38" class="shadow-white-text-small">mdi-instagram</v-icon>
                   </v-btn>
                   <v-btn icon link target="_blank" href="https://www.facebook.com/Bingolin-Telebingo-en-Linea-108161027651276" class="mx-4">
-                    <v-icon color="white" size="32">mdi-facebook</v-icon>
+                    <v-icon color="#3A5795" size="38" class="shadow-white-text-small" >mdi-facebook</v-icon>
                   </v-btn>
                   <v-btn icon link href="#" class="mx-4">
-                    <v-icon color="white" size="32">mdi-twitter</v-icon>
+                    <v-icon color="#5EA9DD" size="38" class="shadow-white-text-small">mdi-twitter</v-icon>
                   </v-btn>
               </div> 
             </v-col>
@@ -57,5 +57,43 @@ export default {
 </script>
 
 <style>
+.titulo-logo{
+  -webkit-text-stroke: 2.5px #2764A0;
+  
+  
+}
 
+.titulo-logo-orange
+{
+  /* standard gradient background */
+  background: linear-gradient(180deg, rgba(240,127,25,1) 50%, rgba(239,104,31,1) 50%);
+  /* clip informático */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titulo-logo-green
+{
+ /* standard gradient background */
+  background: linear-gradient(180deg, rgba(175,203,30,1) 50%, rgba(25,199,12,1) 50%);
+  /* clip informático */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitulo-logo{
+  color: #2764A0;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.shadow-white-text
+{
+  text-shadow: -2px -2px 1px rgb(255, 255, 255), 2px 2px 1px rgb(255, 255, 255), -2px 2px 1px rgb(255, 255, 255), 2px -2px 1px rgb(255, 255, 255);
+}
+
+.shadow-white-text-small
+{
+  text-shadow: -1px -1px 1px rgb(255, 255, 255), 1px 1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255);
+}
 </style>

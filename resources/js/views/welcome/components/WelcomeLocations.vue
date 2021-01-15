@@ -26,14 +26,14 @@
                     align="center"
                     justify="center"
                   >
-                  <v-col class="text-center text-image-white">
+                  <v-col class="text-center shadow-white-text-small">
 
                     <v-tooltip bottom color="red">
                     <template v-slot:activator="{ on, attrs }">
                       <v-icon
                         color="red"
                         size="45"
-                        class="mx-2 text-image-white"
+                        class="mx-2 shadow-white-text-small"
                         dark
                         v-bind="attrs"
                         v-on="on"
@@ -50,7 +50,7 @@
                       <v-icon
                         color="yellow"
                         size="45"
-                        class="mx-2 text-image-white"
+                        class="mx-2 shadow-white-text-small"
                         dark
                         v-bind="attrs"
                         v-on="on"
