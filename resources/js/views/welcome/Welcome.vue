@@ -2,6 +2,7 @@
 <v-app class="transparent">
   <v-main>
     <v-container fluid class="mt-n8">
+      <v-card class="pa-1 rounded-lg elevation-3" color="amber darken-1">
       <v-row dense>
         <v-col cols="12" md="7">
           <VisorVideo></VisorVideo>
@@ -10,6 +11,7 @@
           <WelcomeBanner></WelcomeBanner>
         </v-col>
       </v-row>
+      </v-card>
       <v-row class="mt-4">
         <v-col cols="12" md="4">
           <WelcomePromotion></WelcomePromotion>
