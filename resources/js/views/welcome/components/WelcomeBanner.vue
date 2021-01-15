@@ -62,7 +62,7 @@ export default {
   filter:drop-shadow(-3px -3px 1px rgb(255, 255, 255));
  /*   1px 1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255); */
  font-family: 'Komika Axis', sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   
 }
 
