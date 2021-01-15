@@ -26,11 +26,11 @@
     <v-dialog
       v-model="detalle"
       v-if="detalle"
-      width="50rem"
-      content-class="rounded-lg"
+      :width="($vuetify.breakpoint.mobile) ? '100vw': '60vw'"
+      content-class="rounded-lg elevation-0"
     >
-      <v-card height="27rem" class="rounded-lg">
-        <img height="100%" width="100%" :src="image">
+      <v-card class="transparent">
+        <img height="" width="100%" :src="image">
       </v-card>
     </v-dialog>
 
