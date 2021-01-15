@@ -15,7 +15,7 @@
                         <iframe  v-if="video.id == dialogVideo"
                             class="rounded-lg holder-iframe" 
                             @load="loading = false" 
-                            :src="`${video.src}?&enablejsapi=1&loop=1&rel=0&showinfo=0`"  
+                            :src="`${video.src}`"  
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
@@ -41,7 +41,6 @@ export default {
         videos:[
            { id: 0, src: 'https://www.youtube.com/embed/videoseries?list=PL2tw3E5SMMElCayTUDPWuLFlZPLWawmiO' },
            { id: 1, src: 'https://www.youtube.com/embed/videoseries?list=PLhVF_CPD362lgBZRNNj0qHU6zyLnzcqfX' }, 
-           { id: 2, src: 'https://www.youtube.com/embed/videoseries?list=PLx0sYbCqOb8TBPRdmBHs5Iftvv9TPboYG' } 
         ]
     })
 }
