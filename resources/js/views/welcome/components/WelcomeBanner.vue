@@ -26,7 +26,7 @@
                   <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/p/CJtP6zZpvLh/" class="mx-4">
                     <v-icon color="#517fa4" size="38" class="shadow-white-text-small">mdi-instagram</v-icon>
                   </v-btn>
-                  <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/Bingolin-Telebingo-en-Linea-108161027651276" class="mx-4">
+                  <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/bingolincartago" class="mx-4">
                     <v-icon color="#3A5795" size="38" class="shadow-white-text-small" >mdi-facebook</v-icon>
                   </v-btn>
                   <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://twitter.com/BingolinL" class="mx-4">
