@@ -81,7 +81,7 @@
 
                   <v-tooltip bottom color="green" >
                     <template v-slot:activator="{ on, attrs }">
-                      <v-btn icon class="mx-2" target="_blank" :href="`https://wa.me/${loc.tx_whatsapp}`">
+                      <v-btn icon class="mx-2" target="_blank" rel="noreferrer noopener" :href="`https://wa.me/${loc.tx_whatsapp}`">
                         <v-icon
                           color="green"
                           size="45"

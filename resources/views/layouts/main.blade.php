@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- SEO -->
-    <meta name="description" content="Bingolin"/>
+    <meta name="description" content="Bingolin, telebingo en linea"/>
     <meta name="keywords" content="Bingolin, bingo, telebingo, linea">
     <meta name="robots" content="index,follow"/>
     <meta name="googlebot" content="index,follow"/>
     <meta name="googlebot-video" content="index,follow"/>
     <meta name="googlebot-image" content="index,follow"/>
-    <meta name="author" content="lyustiz@gmail.com">
+    <meta name="author" content="Luis Yustiz lyustiz@gmail.com">
     <meta name="owner" content="Bingolin">
+    <meta name="copyright" content="Bingolin" />
 
     <!-- Schema.org Google -->
     <meta itemprop="name" content="Bingolin">
@@ -41,7 +42,7 @@
 
      <!-- Material Icons -->
     <link rel="stylesheet" href="/assets/googlefonts/css/css.css">
-    <link href="http://fonts.cdnfonts.com/css/komika-axis" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/komika-axis" rel="stylesheet">
 	
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
