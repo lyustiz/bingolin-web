@@ -44,6 +44,7 @@ class HomeController extends Controller
         $foto = Foto::select('nb_foto', 'tx_src','id_tipo_foto','id_origen','id_status')
                     ->with(['sede:id,nb_sede'])
                     ->activo()
+                    ->orderBy('id_origen', 'asc')
                     ->get();
 
         $sede = Sede::select('id',
@@ -57,6 +58,7 @@ class HomeController extends Controller
                              'id_status')
                         ->with(['foto:nb_foto,tx_src,id_tipo_foto,id_origen'])
                         ->activo()
+                        ->orderBy('id', 'asc')
                         ->get();
 
         $enlace = Enlace::select('nb_enlace',
