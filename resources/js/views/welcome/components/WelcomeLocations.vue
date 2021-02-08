@@ -137,7 +137,7 @@
 
     <v-dialog
       v-model="ubicacion"
-      width="30rem"
+      :width="($vuetify.breakpoint.mobile) ? '100vw': '60vw'"
       content-class="rounded-xl"
       v-if="ubicacion"
     >

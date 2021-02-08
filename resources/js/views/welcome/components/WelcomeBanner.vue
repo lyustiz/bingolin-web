@@ -17,7 +17,7 @@
           > 
           <v-row class="fill-height" justify="center" align="center">
             <v-col cols="12" class="text-center">
-               <div class=""><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo">LIN</span></div> 
+               <div class="logo-banner"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo">LIN</span></div> 
                <div class="subtitulo-logo shadow-white-text">Telebingo en Linea</div>   
                <div class="mt-1">
                   <v-btn icon link target="_blank" href="https://www.youtube.com/channel/UC3IjTAtJh4WWZelow8DzL8Q" class="mx-4">
@@ -61,9 +61,11 @@ export default {
   -webkit-text-stroke: 2.5px #2764A0;
   filter:drop-shadow(-3px -3px 1px rgb(255, 255, 255));
  /*   1px 1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255); */
- font-family: 'Komika Axis', sans-serif;
-  font-size: 4rem;
-  
+ font-family: 'Komika Axis', sans-serif;  
+}
+
+.logo-banner{
+   font-size: 4rem;
 }
 
 .titulo-logo-orange

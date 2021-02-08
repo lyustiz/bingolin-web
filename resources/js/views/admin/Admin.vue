@@ -161,7 +161,7 @@ export default {
 
     login(){
       if (!this.$refs.loginForm.validate())  return 
-      if( this.form.nb_usuario = 'admin' && this.form.password == 12345678)
+      if( this.form.nb_usuario = 'admin' && this.form.password == '@pommekt2156')
       {
         this.isLogin = false
       }else{
