@@ -3,6 +3,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <meta name="description" content="Bingolin"/>
+    <meta name="keywords" content="Bingolin, bingo, telebingo, linea">
+    <meta name="robots" content="index,follow"/>
+    <meta name="googlebot" content="index,follow"/>
+    <meta name="googlebot-video" content="index,follow"/>
+    <meta name="googlebot-image" content="index,follow"/>
+    <meta name="author" content="lyustiz@gmail.com">
+    <meta name="owner" content="Bingolin">
+
+    <!-- Schema.org Google -->
+    <meta itemprop="name" content="Bingolin">
+    <meta itemprop="description" content="Bingolin, telebingo en linea.">
+    <meta itemprop="image" content="http://bingolincolombia.com/images/logo.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bingolin">
+    <meta name="twitter:description" content="Bingolin, telebingo en linea.">
+    <meta name="twitter:site" content="@bingolin">
+    <meta name="twitter:image:src" content="http://bingolincolombia.com/images/logo.jpg">
+
+    <!-- Facebook, -->
+    <meta name="og:title" content="Bingolin">
+    <meta name="og:description" content="Bingolin, telebingo en linea.">
+    <meta name="og:image" content="hhttp://bingolincolombia.com/images/logo.jpg">
+    <meta name="og:url" content="http://bingolincolombia.com/">
+    <meta name="og:site_name" content="Bingolin">
+    <meta name="og:locale" content="es_Ve">
+    <meta name="og:type" content="app">
+
 	
 	<!-- Css Principal -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
