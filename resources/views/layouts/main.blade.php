@@ -59,5 +59,8 @@
      
 	<!-- Scripts Principal -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+
+    <!-- Scripts Google Ad -->
+    <script data-ad-client="ca-pub-2767007310073202" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 </html>
