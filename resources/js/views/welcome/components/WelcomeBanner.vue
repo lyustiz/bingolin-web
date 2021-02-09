@@ -2,7 +2,7 @@
   <v-row>
       <v-col >
         <v-carousel 
-          class="rounded-lg" 
+          class="rounded-xl" 
           height="60vh"
           hide-delimiters
           hide-delimiter-background
@@ -17,7 +17,7 @@
           > 
           <v-row class="fill-height" justify="center" align="center">
             <v-col cols="12" class="text-center">
-               <div class="logo-banner"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo">LIN</span></div> 
+               <div class="logo-banner"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo ml-1">LIN</span></div> 
                <div class="subtitulo-logo shadow-white-text">Telebingo en Linea</div>   
                <div class="mt-1">
                   <v-btn icon link target="_blank" rel="noreferrer noopener"  href="https://www.youtube.com/channel/UC3IjTAtJh4WWZelow8DzL8Q" class="mx-4">

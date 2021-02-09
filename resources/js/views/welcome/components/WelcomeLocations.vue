@@ -1,7 +1,7 @@
 <template>
 
-<v-card height="" color="white" class="rounded-lg elevation-5">
-  <v-card-text class="text-center white--text">
+<v-card height="" color="white" class="rounded-xl elevation-5">
+  <v-card-text class="text-center white--text section-container">
     <v-row no-gutters>
         <v-col cols="12">
             <v-card  flat> 
@@ -142,7 +142,7 @@
       v-if="ubicacion"
     >
     <v-card height="50vh">
-      <iframe width="100%" height="100%" :src="`https://www.google.com/maps/embed?pb=${map}`">
+      <iframe width="100%" height="100%" :src="`https://www.google.com/maps/embed?${map}`">
       </iframe> 
       <v-btn fab x-small absolute right class="mt-2" color="deep-orange" @click="ubicacion=false"><v-icon color="white">mdi-close</v-icon></v-btn>
     </v-card>

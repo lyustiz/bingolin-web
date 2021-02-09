@@ -1,7 +1,7 @@
 <template>
 
-  <v-card height="" color="white" class="rounded-lg elevation-5">
-    <v-card-text class="text-center white--text">
+  <v-card height="" color="white" class="rounded-xl elevation-5">
+    <v-card-text class="text-center white--text section-container">
       <v-row no-gutters>
           <v-col cols="12">
             <v-card  flat> 
@@ -65,5 +65,7 @@ export default {
 </script>
 
 <style>
-
+.section-container{
+  border: 8px solid #2764A0 !important
+}
 </style>

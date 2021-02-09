@@ -1,6 +1,6 @@
 <template>
   <v-col cols="12" md="4">
-        <v-card dark class="white rounded-lg elevation-10" height="30.8rem"> 
+        <v-card dark class="white rounded-xl elevation-10" height="30.8rem"> 
           <v-card-title class="pa-6">
 
             <v-row class="deep-orange white--text rounded-t-lg">

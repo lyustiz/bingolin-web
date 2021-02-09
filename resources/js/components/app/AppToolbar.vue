@@ -1,18 +1,20 @@
 <template>
 
+
      <v-app-bar
       app
-      color="transparent"
+      color="rgba(255, 179, 0, 0.2)"
       dark
-      dense
       flat
-      class="pt-3"
+      hide-on-scroll
     >
       <v-avatar size="50" color="white" class="mr-2" @click="navigateToName('welcome')">
         <img src="/images/logo.jpg" alt="Bingolin">
       </v-avatar>
 
-      <v-toolbar-title class="display-1 font-weight-bold">Bingolin</v-toolbar-title>
+      <v-toolbar-title class="display-1 font-weight-bold">
+        <div class="logo-titulo mx-3"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo ml-1">LIN</span></div> 
+        </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -56,16 +58,6 @@
         Login
       </v-btn> 
 
-    <v-dialog
-      v-model="promocion"
-      max-width="99vw"
-      content-class="rounded-xl"
-      v-if="promocion"
-    >
-      <v-card dark max-height="43rem">
-       <visor-video @closeDialog="promocion=false"></visor-video>
-      </v-card>
-    </v-dialog>
     
     </v-app-bar>
 
@@ -133,6 +125,34 @@
 
     }
 </script>
-<style>
+<style scoped>
+.titulo-logo{
+  -webkit-text-stroke: 1.5px #2764A0;
+  filter:drop-shadow(-3px -3px 1px rgb(255, 255, 255));
+ /*   1px 1px 1px rgb(255, 255, 255), -1px 1px 1px rgb(255, 255, 255), 1px -1px 1px rgb(255, 255, 255); */
+ font-family: 'Komika Axis', sans-serif;  
+}
+
+.logo-titulo{
+   font-size: 2rem;
+}
+
+.titulo-logo-orange
+{
+  /* standard gradient background */
+  background: linear-gradient(180deg, rgba(240,127,25,1) 50%, rgba(239,104,31,1) 50%);
+  /* clip informático */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.titulo-logo-green
+{
+ /* standard gradient background */
+  background: linear-gradient(180deg, rgba(175,203,30,1) 50%, rgba(25,199,12,1) 50%);
+  /* clip informático */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 </style>

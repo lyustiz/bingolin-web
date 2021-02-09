@@ -1,10 +1,12 @@
 <template>
 
-    <div>
-        <v-card dark class="rounded-lg" height="60vh">
-            <v-row no-gutters justify="center">
+        <v-card dark class="rounded-xl card-holder" height="60vh">
+            <v-card-text class="pa-0">
+                
+            
+            <v-row no-gutters justify="center" class="">
 
-                <v-window v-model="dialogVideo" continuous show-arrows class="windows-holder rounded-lg"> 
+                <v-window v-model="dialogVideo" continuous show-arrows class="windows-holder rounded-xl"> 
                     <v-window-item
                         v-for="video in videos"
                         :key="video.id"
@@ -26,8 +28,8 @@
                     
                
             </v-row>
+            </v-card-text>
         </v-card>
-    </div>
 
 </template>
 
@@ -48,6 +50,11 @@ export default {
 </script>
 
 <style>
+
+.card-holder
+{
+    border: 3px solid white; 
+}
 .windows-holder
 {
   width: 100%;
