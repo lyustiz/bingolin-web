@@ -34,6 +34,7 @@
                 item-key="id"
                 :loading="loading"
                 sort-by=""
+                :items-per-page="20"
                 dense
             >
 
@@ -43,7 +44,7 @@
 						<td class="text-xs-left">{{ item.tx_documento }}</td>
 						<td class="text-xs-left">{{ item.tx_telefono }}</td>
 						<td class="text-xs-left">{{ item.tx_telefono2 }}</td>
-						<td class="text-xs-left">{{ item.tx_observaciones }}</td>
+						<td class="text-xs-left">{{ item.tx_direccion }}</td>
 						<td class="text-xs-left">
                             <status-switch 
                                 :loading="loading" 

@@ -34,6 +34,7 @@
                 item-key="id"
                 :loading="loading"
                 sort-by=""
+                dense
             >
 
                 <template v-slot:item="{ item }">
@@ -43,7 +44,6 @@
 						<td class="text-xs-left">{{ item.nu_monto }}</td>
 						<td class="text-xs-left">{{ item.tx_icono }}</td>
 						<td class="text-xs-left">{{ item.tx_color }}</td>
-						<td class="text-xs-left">{{ item.tx_observaciones }}</td>
 						<td class="text-xs-left">
                             <status-switch 
                                 :loading="loading" 
@@ -111,7 +111,6 @@ export default {
 			{ text: 'Monto',   value: 'nu_monto' },
 			{ text: 'Icono',   value: 'tx_icono' },
 			{ text: 'Color',   value: 'tx_color' },
-			{ text: 'Observaciones',   value: 'tx_observaciones' },
 			{ text: 'Status',   value: 'id_status' },
             { text: 'Acciones', value: 'actions', sortable: false, filterable: false },
         ],

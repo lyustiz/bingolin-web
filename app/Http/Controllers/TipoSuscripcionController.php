@@ -30,9 +30,9 @@ class TipoSuscripcionController extends Controller
     public function store(Request $request)
     {
         $validate = request()->validate([
-            'nb_tipo_subscripcion'=> 	'required|string|max:30',
+            'nb_tipo_suscripcion'=> 	'required|string|max:30',
 			'nu_dias'           => 	'required|string|max:255',
-			'nu_monto'          => 	'required|numeric|max:12',
+			'nu_monto'          => 	'required|numeric|max:999999999',
 			'tx_icono'          => 	'nullable|string|max:30',
 			'tx_color'          => 	'nullable|string|max:30',
 			'tx_observaciones'  => 	'nullable|string|max:100',
@@ -66,9 +66,9 @@ class TipoSuscripcionController extends Controller
     public function update(Request $request, TipoSuscripcion $tipoSuscripcion)
     {
         $validate = request()->validate([
-            'nb_tipo_subscripcion'=> 	'required|string|max:30',
+            'nb_tipo_suscripcion'=> 	'required|string|max:30',
 			'nu_dias'           => 	'required|string|max:255',
-			'nu_monto'          => 	'required|numeric|max:12',
+			'nu_monto'          => 	'required|numeric|max:999999999',
 			'tx_icono'          => 	'nullable|string|max:30',
 			'tx_color'          => 	'nullable|string|max:30',
 			'tx_observaciones'  => 	'nullable|string|max:100',

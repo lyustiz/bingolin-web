@@ -34,6 +34,7 @@
                 item-key="id"
                 :loading="loading"
                 sort-by=""
+                :items-per-page="20"
             >
 
                 <template v-slot:item="{ item }">

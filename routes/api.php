@@ -43,6 +43,8 @@ Route::put('/status/resource',                  'StatusController@updateResource
 
 Route::apiResource('/status',           'StatusController');
 Route::apiResource('/suscripcion',     'SuscripcionController');
+Route::put('/suscripcion/{suscripcion}/observaciones',     'SuscripcionController@updateObservaciones');
+
 Route::apiResource('/suscriptor',      'SuscriptorController');
 Route::apiResource('/tipoSuscripcion', 'TipoSuscripcionController');
 Route::apiResource('/vendedor',        'VendedorController');

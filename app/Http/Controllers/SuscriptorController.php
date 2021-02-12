@@ -43,7 +43,7 @@ class SuscriptorController extends Controller
         $request->nb_subscriptor = ucwords( strtolower($request->nb_subscriptor));
         $suscriptor = suscriptor::create($request->all());
 
-        return [ 'msj' => 'Suscriptor Agregado Correctamente', compact('suscriptor') ];
+        return [ 'msj' => 'Suscriptor Agregado Correctamente', 'suscriptor' =>  $suscriptor];
     }
 
     /**
@@ -83,6 +83,8 @@ class SuscriptorController extends Controller
 
         return [ 'msj' => 'Suscriptor Editado' , compact('suscriptor')];
     }
+
+    
 
     /**
      * Remove the specified resource from storage.

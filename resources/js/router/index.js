@@ -10,7 +10,9 @@ import Admin               from '@views/admin/Admin';
 
 //tools
 import PageNotFound     from  '@views/404/NotFound'
-import Crud             from  '@views/crud/crud'
+
+import Suscripcion    from  '@views/suscripcion/AppSuscripcion'
+import Crud           from  '@views/crud/crud'
 
 let isAuthenticated = true;
 export default new Router({
@@ -46,6 +48,16 @@ export default new Router({
           component: Admin,
         },
 
+
+        {
+          path:  '/suscripcion',
+          name:  'suscripcion',
+          label: 'suscripcion',
+          icon:  'mdi-home',
+          profile: '',
+          visible: true,
+          component: Suscripcion,
+        },
 
         {
           path:  '/crud',

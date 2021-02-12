@@ -3,15 +3,7 @@
     <list-container :title="title" :head-color="$App.theme.headList" @onMenu="onMenu($event)">
 
         <template slot="HeadTools">
-                <v-text-field
-                    v-model="search"
-                    append-icon="search"
-                    label="Buscar"
-                    hide-details
-                    clearable
-                    dense
-                ></v-text-field>
-
+     
                 <app-button :size="26" depressed icon="mdi-face" label="Agregar Suscriptor" color="blue" inner-class="mx-1" @click="dialogSuscriptor=true"></app-button>
 
                 <app-button :size="26" depressed icon="mdi-face-agent" label="Agregar Vendedor" color="orange" inner-class="mx-1" @click="dialogVendedor=true"></app-button>
@@ -47,25 +39,25 @@
             </v-col>
 
              <v-col cols="12" md="3">
-                <v-select
+                <v-autocomplete
                     :items="selects.suscriptor"
                     v-model="suscriptor"
                     label="Suscriptor"
                     clearable
                     hide-details
                     dense
-                ></v-select>
+                ></v-autocomplete>
             </v-col>
 
              <v-col cols="12" md="3">
-                <v-select
+                <v-autocomplete
                     :items="selects.vendedor"
                     v-model="vendedor"
                     label="Vendedor"
                     clearable
                     hide-details
                     dense
-                ></v-select>
+                ></v-autocomplete>
             </v-col>
 
             </v-row> 
@@ -79,19 +71,42 @@
                 sort-by=""
                 dense
                 class="mt-6"
+                :items-per-page="20"
             >
                 <template v-slot:item="{ item }">
                     <tr>
                         <td class="caption">
                             <v-row no-gutters>
-                                <v-col>{{ item.suscriptor.nb_suscriptor }}</v-col>
+                                <v-col>
+                  
+                                            {{ item.suscriptor.nb_suscriptor }}
+                       
+                                </v-col>
                                 <v-col cols="auto">
-                                    <list-simple-icon 
-                                        v-if="item.tx_observaciones"
-                                        :size="20" class="mx-2"
-                                        :label="(item.tx_observaciones) ? item.tx_observaciones : '-'" 
-                                        icon="mdi-alert-circle" color="red">
-                                    </list-simple-icon>
+                                     <v-edit-dialog
+                                            :return-value.sync="item.tx_observaciones"
+                                            large
+                                            cancel-text="Cancelar"
+                                            save-text="Actualizar"
+                                            @save="updateObservaciones(item)"
+                                            >
+                                            <list-simple-icon 
+                                                :size="20" class="mx"
+                                                :label="(item.tx_observaciones) ? item.tx_observaciones : '-'" 
+                                                icon="mdi-alert-circle" 
+                                                :color="(item.tx_observaciones) ? 'red' : 'grey lighten-3' ">
+                                            </list-simple-icon>
+                                            <template v-slot:input>
+                                                <v-text-field
+                                                v-model="item.tx_observaciones"
+                                                label="Obeservaciones"
+                                                single-line
+                                                counter
+                                                clearable
+                                                ></v-text-field>
+                                            </template>
+                                        </v-edit-dialog>    
+                                    
                                 </v-col>
                             </v-row>
                         </td>
@@ -102,13 +117,7 @@
 						<td class="caption">{{ item.nu_monto | formatNumber}}</td>
 						<td class="caption">{{ item.fe_suscripcion | formatDate}}</td>
 						<td class="caption">{{ item.fe_vencimiento | formatDate }}</td>
-					<!-- 	<td>
-                            <list-simple-icon 
-                                :size="28" class="mx-2"
-                                :label="(item.tx_observaciones) ? item.tx_observaciones : '-'" 
-                                :icon="(item.tx_observaciones) ? 'mdi-card-text' : 'mdi-card-text-outline'" color="deep-orange">
-                            </list-simple-icon>
-                        </td> -->
+
 						<td>
                             <v-chip small :color="item.vencimiento.tx_color">{{item.vencimiento.tx_vencido}}</v-chip>
                         </td>
@@ -214,12 +223,11 @@ export default {
                 { text: 'Suscriptor',       value: 'suscriptor.nb_suscriptor', filter: this.filterSuscriptor },
                 { text: 'Telefono',         value: 'suscriptor.tx_telefono' },
                 { text: 'Vendedor',         value: 'vendedor.nb_vendedor', filter: this.filterVendedor },
-                { text: 'Tipo', value: 'tipo_suscripcion.nb_tipo_suscripcion', filter: this.filterTipoSuscripcion },
+                { text: 'Tipo',             value: 'tipo_suscripcion.nb_tipo_suscripcion', filter: this.filterTipoSuscripcion },
                 { text: 'Dias',             value: 'nu_dias' },
                 { text: 'Monto',            value: 'nu_monto' },
                 { text: 'Suscripcion',      value: 'fe_suscripcion' },
                 { text: 'Vencimiento',      value: 'fe_vencimiento' },
-               /*  { text: 'Obs',              value: 'tx_observaciones', sortable: false, filterable: false }, */
                 { text: 'Status',           value: 'vencimiento.tx_vencido' , filter: this.filterVencimiento },
                 { text: 'Acciones',         value: 'actions', sortable: false, filterable: false },
             ], 
@@ -261,10 +269,35 @@ export default {
             return value == this.vendedor
         },
 
+        updateObservaciones(item)
+        {
+            console.log(item ,this.idUser)
+            
+            this.loading = true;
+
+            this.idUser =  1 //TODO
+
+            let form = { id_usuario: this.idUser, tx_observaciones: item.tx_observaciones, ddd:1}
+            
+            axios.put(`${this.apiUrl}suscripcion/${item.id}/observaciones`, form)
+            .then(response => 
+            {
+                this.showMessage(response.data.msj)
+            })
+            .catch(error =>
+            {
+                this.showError(error);
+            })
+            .finally( () =>
+            {
+                this.loading = false
+            }); 
+        },
+
         closeDialog(refresh, dialog)
         {
-
             this[dialog]   = false
+
             if(refresh)    this.list()
         }
    

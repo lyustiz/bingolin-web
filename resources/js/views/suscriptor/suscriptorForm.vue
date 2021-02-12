@@ -24,6 +24,7 @@
             <v-text-field
                 :rules="[rules.required]"
                 v-model="form.tx_documento"
+                type="number"
                 label="Documento"
                 placeholder="Indique Documento"
                 dense

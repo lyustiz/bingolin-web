@@ -9,7 +9,7 @@
         <v-row  dense>
 
          <v-col cols="12">
-            <v-select
+            <v-autocomplete
             :items="selects.suscriptor"
             item-text="nb_suscriptor"
             item-value="id"
@@ -18,8 +18,17 @@
             label="Suscriptor"
             :loading="loading"
             dense
-            append-outer-icon=""
-            ></v-select>
+            >
+            <template v-slot:append-outer>
+                <v-menu content-class="rounded-xl" left offset-x :close-on-content-click="false" v-model="menuSuscriptor">
+                    <template v-slot:activator="{ on, attrs }">
+                     <v-btn icon color="success" v-on="on" v-bind="attrs"><v-icon>mdi-plus-circle</v-icon></v-btn>     
+                    </template>
+                    <AppSuscriptorForm @closeMenu="menuSuscriptor=false" @newSuscriptor="newSuscriptor($event)"></AppSuscriptorForm>
+                </v-menu>
+            </template>
+            
+            </v-autocomplete>
         </v-col>
                           
         <v-col cols="12">
@@ -145,9 +154,16 @@
 <script>
 
 import Appform from '@mixins/Appform';
+import AppSuscriptorForm from '@views/suscriptor/AppSuscriptorForm'
 
 export default {
+
+    components:{
+        AppSuscriptorForm
+    },
+
     mixins: [Appform],
+
     data() {
         return {
             resource: 'suscripcion',
@@ -181,6 +197,7 @@ export default {
 	 	 	 	vendedor: 	     ['?activo=1&combo=1'],
 	 	 	 	tipoSuscripcion: ['?activo=1&combo=1'],
             },
+            menuSuscriptor: false
         }
     },
 
@@ -210,8 +227,37 @@ export default {
 
             if(!this.form.fe_suscripcion) return
 
-            this.form.fe_vencimiento = this.sumDateDays(this.form.fe_suscripcion, this.form.nu_dias).toISOString().substr(0, 10)
+            this.sumWorkingdays(this.form.fe_suscripcion, this.form.nu_dias)
+
+            this.form.fe_vencimiento = this.sumWorkingdays(this.form.fe_suscripcion, this.form.nu_dias).toISOString().substr(0, 10)
             this.dates.fe_vencimiento = this.formatPicker(this.form.fe_vencimiento, 'fe_suscripcion')
+        },
+
+        sumWorkingdays(date, days)
+        {
+            days = parseInt(days) - 1 //include current day
+            
+            let newDate  = new Date(date)
+            
+            let currentDay = null
+
+            let weekday   = 0
+ 
+            for (let day = 1; day <= days; day++) { 
+                
+                currentDay = new Date(newDate.setDate(newDate.getDate() + parseInt(1)))
+                weekday = currentDay.getDay()
+                if (weekday == 6 )  days++ 
+            }
+
+            return currentDay
+        },
+
+        newSuscriptor(suscriptor)
+        {
+            this.selects.suscriptor.push(suscriptor)
+            this.form.id_suscriptor = suscriptor.id
+            this.menuSuscriptor = false
         }
         
     }

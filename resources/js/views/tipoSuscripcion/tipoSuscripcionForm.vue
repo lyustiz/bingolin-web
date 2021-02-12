@@ -104,7 +104,7 @@ export default {
     mixins: [Appform],
     data() {
         return {
-            resource: 'tipo_suscripcion',
+            resource: 'tipoSuscripcion',
             dates:
             {
                 

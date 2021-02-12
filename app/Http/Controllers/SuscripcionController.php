@@ -87,6 +87,18 @@ class SuscripcionController extends Controller
         return [ 'msj' => 'Suscripcion Editada' , compact('suscripcion')];
     }
 
+    public function updateObservaciones(Request $request, Suscripcion $suscripcion)
+    {
+        $validate = request()->validate([
+			'tx_observaciones'  => 	'nullable|string|max:100',
+			'id_usuario'        => 	'required|integer|max:999999999',
+        ]);
+
+        $suscripcion = $suscripcion->update($request->all());
+
+        return [ 'msj' => 'Observacion Actualizada' , compact('suscripcion')];
+    }
+
     /**
      * Remove the specified resource from storage.
      *

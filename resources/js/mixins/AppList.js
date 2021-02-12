@@ -9,7 +9,7 @@ export default
         return {
 
             apiUrl:    this.$App.apiUrl,
-            idUser:    this.$store.getters['getUserid'],
+            idUser:    1, //this.$store.getters['getUserid'],
             loading:   true,
             modal:     false,
             items:     [],
@@ -164,11 +164,11 @@ export default
 
         },
 
-        validResponse(response){
+      /*   validResponse(response){
             this.showMessage(response.data.msj)
             this.modal = false;
             this.$emit('closeModal')    
-        },
+        }, */
 
         //deprecated
         
