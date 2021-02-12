@@ -4,28 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Status extends Model
+class TipoSuscripcion extends Model
 {
-    protected $table 	  = 'status';
+    protected $table 	  = 'tipo_suscripcion';
 
     protected $fillable   = [
-                            'nb_status',
-	 	 	 	 	 	 	'nb_secundario',
-	 	 	 	 	 	 	'co_status',
-                            'co_grupo',
-                            'tx_icono',
-                            'tx_color',
-	 	 	 	 	 	 	'id_padre',
+                            'nb_tipo_suscripcion',
+	 	 	 	 	 	 	'nu_dias',
+	 	 	 	 	 	 	'nu_monto',
+	 	 	 	 	 	 	'tx_icono',
+	 	 	 	 	 	 	'tx_color',
 	 	 	 	 	 	 	'tx_observaciones',
-	 	 	 	 	 	 	'bo_activo',
+	 	 	 	 	 	 	'id_status',
 	 	 	 	 	 	 	'id_usuario'
                             ]; 
     
     protected $hidden     = [
                             'created_at',
 	 	 	 	 	 	 	'updated_at'
-                            ]; 
-                           
+                            ];
+
     public function scopeActivo($query, $activo = true)
     {
         return  ($activo) ? $query->where('id_status', 1) : $query ;
@@ -33,13 +31,12 @@ class Status extends Model
 
     public function scopeComboData($query, $combo = true)
     {
-        return ($combo) ? $query->addSelect('id', 'nb_status', 'tx_icono', 'tx_color') : $query ;
+        return ($combo) ? $query->addSelect('id', 'nb_tipo_suscripcion', 'nu_dias', 'nu_monto', 'tx_icono', 'tx_color') : $query ;
     }
-                        
-    
+
     public function status()
     {
-        return $this->BelongsTo('App\Models\Status', 'id_status')->where('co_grupo', 'GRAL');
+        return $this->BelongsTo('App\Models\Status', 'id_status');
     }
                            
     public function usuario()
@@ -47,8 +44,8 @@ class Status extends Model
         return $this->BelongsTo('App\Models\Usuario', 'id_usuario');
     }
 
-                           
-    //
-
-
+    public function suscripcion()
+    {
+        return $this->HasMany('App\Models\Suscripcion', 'id_tipo_suscripcion');
+    }
 }

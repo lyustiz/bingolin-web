@@ -109,29 +109,16 @@
       v-model="dialog" 
       content-class="rounded-xl"  
       v-if="dialog"
+      scrollable
+      width="80vw"
     >
-      <v-card dark>
-        <v-card-title class="subtitle-1">
-          <v-row>
-            <v-col cols="11" class="text-center">Transmision en Vivo - <span class="text-capitalize">{{ localidad }}</span><v-icon size="30" class="mx-2">mdi-television-play</v-icon></v-col>
-            <v-col cols="1" class="text-right">
-              <v-btn color="white" icon @click="dialog = false" >
-                <v-icon color="white">mdi-close</v-icon>
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-card-title>
-        <v-card-text class="pt-3"> 
-          <iframe 
-            src="https://player.castr.com/live_4db8d0204ea511eb82c4930b3578d304" 
-            class="rounded-lg" 
-            width="100%"
-            height="431" 
-            frameborder="0" 
-            scrolling="no"
-            allow="autoplay allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen">
-          </iframe>
-        </v-card-text>
+      <v-card dark color="black" height="100%" >
+          <v-btn color="red" fab x-small @click="dialog = false" class="mt-6" absolute top left>
+                <v-icon color="white" size="18">mdi-close</v-icon>
+          </v-btn>
+          <div class="video-container rounded-xl">
+              <iframe class="rounded-xl" src="https://cloud2.streaminglivehd.com:2000/VideoPlayer/8056" scrolling="no" frameborder="0" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          </div>
       </v-card>
     </v-dialog>
 
@@ -186,5 +173,23 @@ export default {
 </script>
 
 <style>
+.video-container {
+    overflow: hidden;
+    position: relative;
+    width:100%;
+}
 
+.video-container::after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 </style>

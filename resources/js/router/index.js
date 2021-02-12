@@ -10,7 +10,7 @@ import Admin               from '@views/admin/Admin';
 
 //tools
 import PageNotFound     from  '@views/404/NotFound'
-/*import Crud             from  '@views/crud/crud' */
+import Crud             from  '@views/crud/crud'
 
 let isAuthenticated = true;
 export default new Router({
@@ -44,6 +44,17 @@ export default new Router({
           profile: '',
           visible: true,
           component: Admin,
+        },
+
+
+        {
+          path:  '/crud',
+          name:  'crud',
+          label: 'crud',
+          icon:  'mdi-home',
+          profile: '',
+          visible: true,
+          component: Crud,
         },
         { 
             path: "*", 

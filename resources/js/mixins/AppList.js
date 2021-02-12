@@ -102,6 +102,7 @@ export default
             {
                 this.loading = false
                 this.dialog  = false;
+                this.postResponse('delete')
             });
         },
 
@@ -130,6 +131,7 @@ export default
             .finally( () => 
             {
                 this.loading = false
+                this.postResponse('list')
             });
         },
 
@@ -155,6 +157,17 @@ export default
         onDelete()
         {
             return true
+        },
+
+        postResponse(action)
+        {
+
+        },
+
+        validResponse(response){
+            this.showMessage(response.data.msj)
+            this.modal = false;
+            this.$emit('closeModal')    
         },
 
         //deprecated

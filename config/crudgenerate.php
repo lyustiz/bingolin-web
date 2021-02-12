@@ -3,12 +3,12 @@
 return [
 
     'paths' => [
-        'models'      => 'Models/',
-        'controllers' => 'Http/Controllers/',
-        'views'       => 'resources/js/pages/',
-        'routes'      => 'resources/js/router/index.js',
-        'apis'        => 'routes/api.php',
-        'templates'   => 'resources/templates/'
+        'models'      => 'Models' . DIRECTORY_SEPARATOR, 
+        'controllers' => 'Http'.DIRECTORY_SEPARATOR.'Controllers'.DIRECTORY_SEPARATOR,
+        'views'       => 'resources'.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR,
+        'routes'      => 'resources'.DIRECTORY_SEPARATOR.'js'.DIRECTORY_SEPARATOR.'router'.DIRECTORY_SEPARATOR.'index.js',
+        'apis'        => 'routes'.DIRECTORY_SEPARATOR.'api.php',
+        'templates'   => 'resources'.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR
     ],
 
     'cols' => [

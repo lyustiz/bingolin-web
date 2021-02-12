@@ -194,6 +194,12 @@ export default {
             return date
         },
 
+        sumDateDays(date, days)
+        {
+            let newDate  = new Date(date)
+            return  new Date(newDate.setDate(newDate.getDate() + parseInt(days)))       
+        },
+
         capitalize(value)
         {
             return value.charAt(0)

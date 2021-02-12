@@ -12,6 +12,7 @@
       </div>
 
       <v-tabs color="deep-orange" v-model="tab" class="rounded-t-lg">
+        <v-tab>Subscriptores</v-tab>
         <v-tab>Banner</v-tab>
         <v-tab>Promociones</v-tab>
         <v-tab>Resultados</v-tab>
@@ -19,6 +20,13 @@
       </v-tabs>
 
       <v-tabs-items v-model="tab">
+        <v-tab-item>
+          <v-card flat>
+            <v-card-text class="pa-0">
+                <v-card-text><AppSuscripcion></AppSuscripcion></v-card-text>
+            </v-card-text>
+          </v-card>
+        </v-tab-item>
         <v-tab-item>
           <v-card flat>
             <v-card-text>
@@ -127,6 +135,7 @@ import AdminBanner    from './components/AdminBanner'
 import AdminPromotion from './components/AdminPromotion'
 import AdminWinners   from './components/AdminWinners'
 import AdminLocations from './components/AdminLocations'
+import AppSuscripcion from '@views/suscripcion/AppSuscripcion'
 import AppData        from '@mixins/AppData';
 
 export default {
@@ -136,6 +145,7 @@ export default {
     AdminPromotion,
     AdminWinners,
     AdminLocations,
+    AppSuscripcion
   },
 
   mixins: [AppData],

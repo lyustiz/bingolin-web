@@ -276,6 +276,12 @@ export default
             }
         },
 
+       /*  validResponse(response){
+            this.showMessage(response.data.msj)
+            this.modal = false;
+            this.$emit('closeModal')    
+        }, */
+
 
         //TODO: PENDIENTE REFACTORIIZAR appform extiende de appdata
 

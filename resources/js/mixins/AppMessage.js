@@ -8,11 +8,7 @@ export default {
     },
     methods:
     {
-        validResponse(response){
-            this.showMessage(response.data.msj)
-            this.modal = false;
-            this.$emit('closeModal')    
-        },
+        
 		showMessage (message)
         {
             this.showMsjBar(message, 'success')

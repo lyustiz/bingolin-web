@@ -20,11 +20,11 @@ Vue.prototype.$App = Object.freeze({
     theme:{
             headApp:    'indigo',
             textTitle:  'white--text',
-            headForm:   'indigo',
+            headForm:   'deep-orange',
             titleForm:  'red lighten-4',
             headList:   'grey lighten-3',
             titleList:  'black--text',
-            headModal:  'indigo',
+            headModal:  'deep-orange',
             titleModal: 'white--text',
             button: {
                         insert:  'success',

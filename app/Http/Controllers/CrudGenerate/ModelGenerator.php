@@ -54,7 +54,7 @@ class ModelGenerator
         foreach ($this->tables as $tableName => $table) 
         {
             $exitCode = $this->callMakeModel($table);
-            
+           
             if( $exitCode != 0 )
             {
                 dd('error al crear modelo de la tabla' . $tableName . 'cod'. $exitCode);
@@ -74,14 +74,14 @@ class ModelGenerator
         $force     = true;
 
         $options   = [
-                        'name'              => $this->modelPath.$table->className,
+                        'name'              => $table->className,
                         '--controller'      => true, 
                         '--factory'         => true,
                         '--api'             => true,
                         '--no-interaction'  => true,
                         '--force'           => $force,
                     ];
-
+                       
         return \Artisan::call('make:model', $options);
     }
 
