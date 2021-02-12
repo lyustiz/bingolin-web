@@ -64,6 +64,7 @@
       v-model="isLogin"
       v-if="isLogin"
       fullscreen
+      persistent
     >
       <v-card class="main-color">
       <v-card-text>

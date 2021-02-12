@@ -21,10 +21,11 @@
                   
         <v-col cols="12" md="6">
             <v-text-field
-                :rules="[rules.required, rules.max(11)]"
+                :rules="[rules.required]"
                 v-model="form.tx_documento"
                 label="Documento"
                 placeholder="Indique Documento"
+                type="number"
                 dense
             ></v-text-field>
         </v-col>
