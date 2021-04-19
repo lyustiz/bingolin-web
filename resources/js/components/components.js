@@ -13,7 +13,6 @@ Vue.component('welcome-layout',   WelcomeLayout);
 Vue.component('app-toolbar',      AppToolbar);
 Vue.component('app-login',        Login);
 
-
 //Global Componets
 import ListIcon       from '@components/list/ListIcon'
 import ListSimpleIcon from '@components/list/ListSimpleIcon'
@@ -41,8 +40,7 @@ import AppHelp        from '@components/app/AppHelp'
 import AppUser        from '@components/app/AppUser'
 
 import AppNotifications   from '@components/app/AppNotifications'
-/* import AppMensajes        from '@components/app/AppMensajes'
- */import AppSimpleToolbar   from '@components/app/AppSimpleToolbar'
+import AppSimpleToolbar   from '@components/app/AppSimpleToolbar'
 
 Vue.component('list-icon',        ListIcon);
 Vue.component('list-simple-icon', ListSimpleIcon);
@@ -70,7 +68,6 @@ Vue.component('app-help',         AppHelp);
 Vue.component('app-user',         AppUser);
 
 Vue.component('app-notifications',  AppNotifications);
-/* Vue.component('app-mensajes',       AppMensajes); */
 Vue.component('app-simple-toolbar', AppSimpleToolbar);
 Vue.component('app-button',         AppButton);
 

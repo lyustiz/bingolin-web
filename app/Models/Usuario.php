@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Sanctum\HasApiTokens;
 
-class Usuario extends Authenticatable implements MustVerifyEmail, JWTSubject
+class Usuario extends Authenticatable implements MustVerifyEmail
 {
-	use Notifiable;
+	use HasApiTokens, HasFactory, Notifiable;
 	
 	protected $table 	  = 'usuario';
 
@@ -34,52 +35,19 @@ class Usuario extends Authenticatable implements MustVerifyEmail, JWTSubject
 	 	 	 	 	 	 	'updated_at'
 							]; 
 							
-	protected $hidden   = [ 'password', 'verification', 'remember_token', 'id_usuario', 'api_token', 'created_at', 'updated_at'];
+	protected $hidden   = [ 
+		'password', 
+		'verification',
+		'email_verified_at', 
+		'remember_token', 
+		'id_usuario', 
+		'api_token', 
+		'created_at', 
+		'updated_at'];
            
 	protected $casts = [
         'email_verified_at' => 'datetime',
 	];
-
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
-    }
-
-    public function getJWTCustomClaims()
-    {
-        return [];
-	}
-
-	public function getIsAdminAttribute()
-    {
-        return $this->id_usuario == 1;
-	}
-
-
-	public function getIsDocenteAttribute()
-    {
-        return $this->id_usuario == 2;
-	}
-
-	public function getIsAlumnoAttribute()
-    {
-        return $this->id_usuario == 3;
-	}
-
-	public function getIsAcudienteAttribute()
-    {
-        return $this->id_usuario == 4;
-	}
-
-	public function getIsEmpleadoAttribute()
-    {
-        return $this->id_usuario == 5;
-	}
-
-	public function getIsSecretariaAttribute()
-    {
-        return $this->id_usuario == 6;
-	}
 	
 	public function scopeActivo($query)
     {

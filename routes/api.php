@@ -33,7 +33,7 @@ Route::get('/menu/combo',                       'MenuController@combo');
 Route::apiResource('/menu',                     'MenuController');
 */
 // -- FOTOS / ARCHIVOS -- //
-Route::apiResource('/foto',                              'FotoController');
+Route::apiResource('/foto',                      'FotoController');
 Route::get('/foto/tipoFoto/{tipoFoto}',          'FotoController@fotoTipo');
 //Route::apiResource('/tipoFoto',                 'TipoFotoController');
 

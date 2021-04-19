@@ -13,10 +13,11 @@ use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Sanctum\HasApiTokens;
 
 class UsuarioController extends Controller
 {
-    use UsuarioTrait;
+    use UsuarioTrait, HasApiTokens, HasFactory, Notifiable;
     
     /**
      * Display a listing of the resource.

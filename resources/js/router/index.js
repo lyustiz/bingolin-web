@@ -6,12 +6,13 @@ Vue.use(Router)
 import Welcome             from '@views/welcome/Welcome';
 import Home                from '@views/home/Home';
 import Admin               from '@views/admin/Admin';
+import Login                 from '@views/login/login';
 /*import Home                  from '@views/home/home';*/
 
 //tools
 import PageNotFound     from  '@views/404/NotFound'
 
-import Suscripcion    from  '@views/suscripcion/AppSuscripcion'
+/* import Suscripcion    from  '@views/suscripcion/AppSuscripcion' */
 import Crud           from  '@views/crud/crud'
 
 let isAuthenticated = true;
@@ -49,7 +50,7 @@ export default new Router({
         },
 
 
-        {
+       /*  {
           path:  '/suscripcion',
           name:  'suscripcion',
           label: 'suscripcion',
@@ -57,7 +58,7 @@ export default new Router({
           profile: '',
           visible: true,
           component: Suscripcion,
-        },
+        }, */
 
         {
           path:  '/crud',
@@ -68,6 +69,16 @@ export default new Router({
           visible: true,
           component: Crud,
         },
+        {
+          path: '/login',
+          name: 'login',
+          label: 'Login',
+          icon: 'mdi-account',
+          profile: '*',
+          visible: false,
+          color: 'black',
+          component: Login,
+      },
         { 
             path: "*", 
             name: 'notfound',

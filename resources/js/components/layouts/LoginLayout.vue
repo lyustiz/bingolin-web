@@ -3,7 +3,7 @@
 
 <v-container>
 
-    <v-btn fab absolute color="success" right @click="navegateTo('/')"><v-icon>mdi-home</v-icon></v-btn>
+    <v-btn fab absolute color="warning" left @click="navigateToName('welcome')"><v-icon>mdi-home</v-icon></v-btn>
 
     <v-row class="fill-height" >
 
@@ -38,13 +38,13 @@ export default {
 #register-container{
     height: 92.8vh;
 }
-.holder {
+.loginHolder {
     min-height: 100vh;
-    background-image: url('/images/fondo-login.jpg');
+    background-image: url('/images/login-badground.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover ;
 }
 
 

@@ -45,6 +45,11 @@ export default {
                return 'main-layout'
            }
 
+           if(this.$route.name == 'login')
+           {
+               return 'login-layout'
+           }
+
            return 'welcome-layout'
            
 

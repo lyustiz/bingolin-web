@@ -20,13 +20,13 @@
                <div class="logo-banner"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo ml-1">LIN</span></div> 
                <div class="subtitulo-logo shadow-white-text">Telebingo en Linea</div>   
                <div class="mt-1">
-                  <v-btn icon link target="_blank" rel="noreferrer noopener"  href="https://www.youtube.com/channel/UC3IjTAtJh4WWZelow8DzL8Q" class="mx-4">
+                  <v-btn icon link target="_blank" rel="noreferrer noopener"  href="https://www.youtube.com/channel/UCKGpy6rDSClwrTv54vxn6YQ" class="mx-4">
                     <v-icon color="#ff0000" size="44" class="shadow-white-text-small">mdi-youtube</v-icon>
                   </v-btn>
                   <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/p/CJtP6zZpvLh/" class="mx-4">
                     <v-icon color="#517fa4" size="38" class="shadow-white-text-small">mdi-instagram</v-icon>
                   </v-btn>
-                  <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/bingolincartago" class="mx-4">
+                  <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/bugabingolin" class="mx-4">
                     <v-icon color="#3A5795" size="38" class="shadow-white-text-small" >mdi-facebook</v-icon>
                   </v-btn>
                   <v-btn icon link target="_blank" rel="noreferrer noopener" href="https://twitter.com/BingolinL" class="mx-4">
