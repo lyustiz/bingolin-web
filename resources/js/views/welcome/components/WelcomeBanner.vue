@@ -59,7 +59,7 @@ export default {
 <style>
 
 .social-media{
-  margin-top: 12rem
+  margin-top: 11.5rem
 }
 .titulo-logo{
   -webkit-text-stroke: 2.5px #2764A0;
