@@ -17,9 +17,9 @@
           > 
           <v-row class="fill-height" justify="center" align="center">
             <v-col cols="12" class="text-center">
-               <div class="logo-banner"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo ml-1">LIN</span></div> 
-               <div class="subtitulo-logo shadow-white-text">Telebingo en Linea</div>   
-               <div class="mt-1">
+               <!-- <div class="logo-banner"><span class="titulo-logo-orange titulo-logo">BINGO</span><span class="titulo-logo-green titulo-logo ml-1">LIN</span></div> 
+               <div class="subtitulo-logo shadow-white-text">Telebingo en Linea</div>   --> 
+               <div class="social-media">
                   <v-btn icon link target="_blank" rel="noreferrer noopener"  href="https://www.youtube.com/channel/UCKGpy6rDSClwrTv54vxn6YQ" class="mx-4">
                     <v-icon color="#ff0000" size="44" class="shadow-white-text-small">mdi-youtube</v-icon>
                   </v-btn>
@@ -57,6 +57,10 @@ export default {
 </script>
 
 <style>
+
+.social-media{
+  margin-top: 10rem
+}
 .titulo-logo{
   -webkit-text-stroke: 2.5px #2764A0;
   filter:drop-shadow(-3px -3px 1px rgb(255, 255, 255));
