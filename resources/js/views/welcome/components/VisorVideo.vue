@@ -41,7 +41,7 @@ export default {
         length:    2,
         dialogVideo: 0,
         videos:[
-           { id: 0, src: 'https://www.youtube.com/embed/videoseries?list=PLhVF_CPD362lgBZRNNj0qHU6zyLnzcqfX&rel=0' }, 
+           { id: 0, src: 'https://www.youtube.com/playlist?list=PLhVF_CPD362nCDngoR9Yldsc5FG-yLnwp&rel=0' }, 
         ]
     })
 }
